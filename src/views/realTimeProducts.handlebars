@@ -1,0 +1,52 @@
+<div class="container">
+    <h1>AGREGA TU PRODUCTO</h1>
+  <div class="galeria">
+    <form action="/api/products" method="post">
+        <label>Titulo</label>
+        <input name="title" id="title">
+        <br/>
+        <br/>
+        <label>Descripcion</label>
+        <input name="description" id="description">
+        <br/>
+        <br/>
+        <label>Precio</label>
+        <input name="price" type="number" id="price">
+        <br/>
+        <br/>
+        <label>Foto</label>
+        <input name="img" id="img">
+        <br/>
+        <br/>
+        <label>Código</label>
+        <input name="code" id="code">
+        <br/>
+        <br/>
+        <label>Stock</label>
+        <input name="stock" id="stock">
+        <br/>
+        <br/>
+    </form>
+    </div>
+    <input type="button" id="addProd" value="AGREGAR PRODUCTO">
+    <div >
+        <h3>ELIMINA EL PRODUCTO</h3>
+        <form action="/api/products/:id" method="delete">
+            <label >ID del producto a eliminar</label>
+            <input name="id" id="pid" placeholder="ID del Prod">
+            <br/>
+            <br/>
+        </form>
+            <input type="button" id="deletProd" value="ELIMINAR PRODUCTO">
+    </div>
+    <div>
+        <h3>LISTA DE PRODUCTOS:</h3>
+        
+            <p id="productList"></p>
+        
+    </div>
+</div>
+  </div>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/realTimeProducts.js"></script>

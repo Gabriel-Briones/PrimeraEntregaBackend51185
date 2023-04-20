@@ -1,0 +1,14 @@
+<div class="container">
+  <h1 class="title">PC Componentes - Nuestros productos</h1>
+  <div class="gallery">
+    {{#each products}}
+      <div class="product">
+        <h2>{{this.title}}</h2>
+        <img src="{{this.img}}" alt="{{this.title}}" />
+        <p>{{this.description}}</p>
+        <p>Precio: {{this.price}}</p>
+        <p>Stock: {{this.stock}}</p>
+      </div>
+    {{/each}}
+  </div>
+</div>
